@@ -8,7 +8,7 @@ const images = [
 
 
 const nomi = [
-    'nome città',
+    'Islanda',
     'nome città',
     'nome città',
     'nome città',
@@ -16,11 +16,11 @@ const nomi = [
 ];
 
 const descrizione = [
-    'descrizione citta',
-    'descrizione citta',
-    'descrizione citta',
-    'descrizione citta',
-    'descrizione citta',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit maxime esunt atque. Voluptatibus illo ipsum voluptatem, vero autem similique earum ad. Sint nisi dicta laboriosam libero eligendi ex!',
+    'Proident elit minim vnon ipsum quis adipisicing. Minim velit occaecat qui quis non cillum qui fugiat adipisicing aliquip nostrud aliquip. Deserunt pariatur laborum et est nostrud. Laboris est deserunt excepteur dolor elit elit. Officia excepteur proident qui eiusmod excepteur reprehenderit eu sit commodo enim. Amet ad et officia ad minim.',
+    'Laborum cillum incididunt ea nisi occaecat ea. Enim sit veniam nostrud mollit aliquip qui. Commodo anim laboris aliqua sint cupidatat consectetur tempor magna nulla minim quis. Quis commodo et cillum esse tempor fugiat. Anim incididunt magna sit nisi eu id nulla sint nulla do elit consectetur pariatur id. Occaeca incididunt anim eicia aliqua sit ex qui et quis sunt aliquip.',
+    'Dolor excepteur non eu aliqua id. Ullamco consectetur dolor laborum ea duis magna duis. Commodo fugiat enim elit esse veniam Lorem laboris magna incididunt non. Id Lorem enim sit reprehenderit. Id ipsum est magna ipsum deserunt minim reprehenderit ex occaecat mollit proident velit.',
+    'Proident elit minim . Minim velit occaecat qui quis non cillum qui fugiat adipisicing aliquip nostrud aliquip. Deserunt pariatur laborum et est nostrud. Laboris est deserunt excepteur dolor elit elit. Officia excepteur proident qui eiusmod excepteur reprehenderit eu sit commodo enim. Amet ad et officia ad minim.',
 ];
 
 // imges[i] = nomi [i] ?
@@ -39,8 +39,10 @@ for (let i = 0; i < images.length; i ++){
 
     slides += `<div class="item">
                     <img src="${images[i]}">
+                    <div class="info">
                     <h2>${nomi[i]}</h2>
                     <p>${descrizione[i]}</p>
+                    </div>
                 </div>`;
 }
 
