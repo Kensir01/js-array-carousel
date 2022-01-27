@@ -16,6 +16,7 @@
     display: flex;
     width: 90%;
     height: 60vh;
+    position: relative;
 }
 
 
@@ -91,8 +92,7 @@
 
 .su, .giu {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    right: 9%;
     display: flex;
     justify-content: center;
     align-items: center;

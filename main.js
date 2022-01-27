@@ -9,10 +9,10 @@ const images = [
 
 const nomi = [
     'Islanda',
-    'nome città',
-    'nome città',
-    'nome città',
-    'nome città',
+    'Svizzera   ',
+    'Londra',
+    'Non ne ho proprio idea!',
+    'Maldive',
 ];
 
 const descrizione = [
@@ -47,41 +47,67 @@ for (let i = 0; i < images.length; i ++){
 }
 
 
+let thumbs = '';
+
+for (let i = 0; i < images.length; i ++){
+
+    thumbs += `<div class="thumb">
+                    <img src="${images[i]}">
+                </div>`;
+}
+
+
+
 // Creazione Slide
 let itemsContainer = document.querySelector('.container-left');
 itemsContainer.innerHTML = slides;
+
+let thumbsContainer = document.querySelector('.container-right');
+thumbsContainer.innerHTML = thumbs;
+
 
 
 // inizializzo una variabile che mi tenga traccia della slide attiva
 let currentSlide = 0;
 
-// recupero tutti le slide, ed al primo aggiungo la classe active
+// recupero tutte le slide, ed al primo aggiungo la classe active
 let items = document.getElementsByClassName('item');
 items[currentSlide].classList.add('active');
 
+let thumbnails = document.getElementsByClassName('thumb');
+thumbnails[currentSlide].classList.add('active');
+
 
 // Gestisco il click su slide precedente
+// per le img
 let giu = document.querySelector('.giu')
 giu.addEventListener('click',
     function () {
         if (currentSlide < items.length - 1) {
 
             items[currentSlide].classList.remove('active');
+            thumbnails[currentSlide].classList.remove('active');
+
 
             currentSlide++; // vado alla slide seguente
 
             items[currentSlide].classList.add('active');
+            thumbnails[currentSlide].classList.add('active');
+
 
         } else {
             items[currentSlide].classList.remove('active');
+            thumbnails[currentSlide].classList.remove('active');
 
             currentSlide = 0;
 
             items[currentSlide].classList.add('active');
+            thumbnails[currentSlide].classList.add('active');
 
         }
     }
 );
+
 
 // gestisco il click su slide seguente 
 let su = document.querySelector('.su')
@@ -90,17 +116,22 @@ function () {
     if (currentSlide > 0) {
 
         items[currentSlide].classList.remove('active');
+        thumbnails[currentSlide].classList.remove('active');
+
 
         currentSlide--; 
 
         items[currentSlide].classList.add('active');
+        thumbnails[currentSlide].classList.add('active');
 
     } else {
         items[currentSlide].classList.remove('active');
+        thumbnails[currentSlide].classList.remove('active');
 
         currentSlide = 4;
 
         items[currentSlide].classList.add('active');
+        thumbnails[currentSlide].classList.add('active');
 
     }
 }
